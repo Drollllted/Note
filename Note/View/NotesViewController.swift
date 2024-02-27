@@ -7,7 +7,9 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class NotesViewController: UIViewController {
+    
+    private let dataBase = DataBaseNotes.shared
     
     private let tableView: UITableView = {
         let tableView = UITableView()
@@ -45,7 +47,7 @@ class ViewController: UIViewController {
     }
 
 }
-extension ViewController: UITableViewDelegate, UITableViewDataSource{
+extension NotesViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 50
     }
