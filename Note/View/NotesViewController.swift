@@ -12,11 +12,12 @@ class NotesViewController: UIViewController {
     
     private let dataBase = DataBaseNotes.shared
     
-    private let build = ViewBuilder.shared
-    
     var notes = [Note]()
     
     var note: Note?
+    
+    
+    //MARK: Create TableView
     
     private let tableView: UITableView = {
         let tableView = UITableView()
@@ -24,7 +25,7 @@ class NotesViewController: UIViewController {
         tableView.translatesAutoresizingMaskIntoConstraints = false
         return tableView
     }()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -39,10 +40,11 @@ class NotesViewController: UIViewController {
         tableView.dataSource = self
     }
     
+    //MARK: Objc method
     @objc func didTap() {
         let vc = TextViewController()
         navigationController?.pushViewController(vc, animated: true)
-
+        
     }
     override func viewWillAppear(_ animated: Bool) {
         tableView.reloadData()
@@ -58,9 +60,9 @@ class NotesViewController: UIViewController {
             tableView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor)
         ])
     }
-
+    
 }
-     
+    //MARK: Extensions UiTableView
 extension NotesViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return dataBase.notes.count

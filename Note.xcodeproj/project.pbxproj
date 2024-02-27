@@ -17,8 +17,6 @@
 		DDA007642B8CD2F300444399 /* Note+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA007622B8CD2F300444399 /* Note+CoreDataClass.swift */; };
 		DDA007652B8CD2F300444399 /* Note+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA007632B8CD2F300444399 /* Note+CoreDataProperties.swift */; };
 		DDA0076A2B8CD65B00444399 /* DataBaseNotes.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA007692B8CD65B00444399 /* DataBaseNotes.swift */; };
-		DDA0076C2B8CDFC500444399 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA0076B2B8CDFC500444399 /* CustomCell.swift */; };
-		DDA0076E2B8D201500444399 /* ViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA0076D2B8D201500444399 /* ViewBuilder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,8 +32,6 @@
 		DDA007622B8CD2F300444399 /* Note+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Note+CoreDataClass.swift"; sourceTree = "<group>"; };
 		DDA007632B8CD2F300444399 /* Note+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Note+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		DDA007692B8CD65B00444399 /* DataBaseNotes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBaseNotes.swift; sourceTree = "<group>"; };
-		DDA0076B2B8CDFC500444399 /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
-		DDA0076D2B8D201500444399 /* ViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewBuilder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,7 +65,6 @@
 		DDA007442B8CCAD200444399 /* Note */ = {
 			isa = PBXGroup;
 			children = (
-				DDA0076D2B8D201500444399 /* ViewBuilder.swift */,
 				DDA007682B8CD63200444399 /* Notes */,
 				DDA007672B8CD62100444399 /* View */,
 				DDA007662B8CD60300444399 /* Other */,
@@ -95,7 +90,6 @@
 			children = (
 				DDA007492B8CCAD200444399 /* NotesViewController.swift */,
 				DDA0075C2B8CD0E200444399 /* TextViewController.swift */,
-				DDA0076B2B8CDFC500444399 /* CustomCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -183,11 +177,9 @@
 				DDA007652B8CD2F300444399 /* Note+CoreDataProperties.swift in Sources */,
 				DDA0074A2B8CCAD200444399 /* NotesViewController.swift in Sources */,
 				DDA007462B8CCAD200444399 /* AppDelegate.swift in Sources */,
-				DDA0076C2B8CDFC500444399 /* CustomCell.swift in Sources */,
 				DDA0076A2B8CD65B00444399 /* DataBaseNotes.swift in Sources */,
 				DDA007642B8CD2F300444399 /* Note+CoreDataClass.swift in Sources */,
 				DDA007482B8CCAD200444399 /* SceneDelegate.swift in Sources */,
-				DDA0076E2B8D201500444399 /* ViewBuilder.swift in Sources */,
 				DDA0075B2B8CCF3D00444399 /* Note.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
