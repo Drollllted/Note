@@ -5,4 +5,13 @@
 //  Created by Drolllted on 26.02.2024.
 //
 
-import Foundation
+import UIKit
+
+class CustomCell: UITableViewCell{
+    
+    static let identifire = "identifire"
+    
+    
+    
+    
+}
