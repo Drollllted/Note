@@ -7,31 +7,56 @@
 
 import UIKit
 import CoreData
-class TextViewController: UIViewController, UITextViewDelegate {
+class TextViewController: UIViewController, UITextViewDelegate, UITextFieldDelegate {
     
     private let dataBase = DataBaseNotes.shared
-    private let build = ViewBuilder.shared
-    
     var note: Note?
     
-    private var textView = UITextView()
-    private var textField = UITextField()
+    //MARK: Setup UI models
+    
+    lazy var textView: UITextView = {
+        let textView = UITextView()
+        textView.font = UIFont.systemFont(ofSize: 22, weight: .medium)
+        textView.keyboardType = .default
+        textView.text = note?.text
+        textView.translatesAutoresizingMaskIntoConstraints = false
+        return textView
+    }()
+    
+    lazy var textField: UITextField = {
+        let textField = UITextField()
+        textField.placeholder = "Name Title"
+        textField.font = UIFont.systemFont(ofSize: 30, weight: .bold)
+        textField.keyboardType = .default
+        textField.backgroundColor = .white
+        textField.text = note?.nameRow
+        textField.translatesAutoresizingMaskIntoConstraints = false
+        textField.heightAnchor.constraint(equalToConstant: 40).isActive = true
+        return textField
+    }()
+    
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        build.textView.delegate = self
+        textField.delegate = self
+        textView.delegate = self
         
         view.backgroundColor = .white
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Save", style: .done, target: self, action: #selector(didSave))
         
-        print(dataBase.notes.description)
+        //print(dataBase.notes.description)
         
         setTextField()
         setTextView()
-
+        
     }
-
+    
+    
+    //MARK: Objc method
+    
     @objc func didSave() {
         if self.note == nil {
             self.dataBase.addRowNotes(nameRow: textField.text ?? "", text: textView.text)
@@ -42,8 +67,8 @@ class TextViewController: UIViewController, UITextViewDelegate {
         
     }
     
+    //MARK: Constraints
     private func setTextField() {
-        textField = build.textField
         view.addSubview(textField)
         
         NSLayoutConstraint.activate([
@@ -54,7 +79,6 @@ class TextViewController: UIViewController, UITextViewDelegate {
     }
     
     private func setTextView() {
-        textView = build.textView
         view.addSubview(textView)
         
         NSLayoutConstraint.activate([
@@ -65,6 +89,6 @@ class TextViewController: UIViewController, UITextViewDelegate {
         ])
     }
     
- 
-
+    
+    
 }
