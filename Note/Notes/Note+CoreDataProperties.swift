@@ -25,22 +25,15 @@ extension Note {
 extension Note : Identifiable {
 
     //MARK: For Rows
-    func updateNotes(nameRow: String) {
+    func updateNotes(nameRow: String, text: String) {
         self.id = id
         self.nameRow = nameRow
+        self.text = text
         try? managedObjectContext?.save()
     }
     
     func deleteNotes() {
         managedObjectContext?.delete(self)
-        try? managedObjectContext?.save()
-    }
-    
-    
-    //MARK: For textView
-    func updateText(text: String){
-        self.id = id
-        self.text = text
         try? managedObjectContext?.save()
     }
 }
