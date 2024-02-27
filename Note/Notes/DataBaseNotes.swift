@@ -12,7 +12,6 @@ class DataBaseNotes {
     static let shared = DataBaseNotes()
     var notes = [Note]()
     
-    private let build = ViewBuilder.shared
     
     private init() {
         fetchNotes()
