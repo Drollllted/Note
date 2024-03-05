@@ -38,6 +38,12 @@ class NotesViewController: UIViewController {
         
         tableView.delegate = self
         tableView.dataSource = self
+        
+        
+        if notes.count == 0 {
+            dataBase.addRowNotes(nameRow: "First Note", text: "Your first note. Can you create you first Note?")
+        }
+        
     }
     
     //MARK: Objc method
@@ -46,6 +52,9 @@ class NotesViewController: UIViewController {
         navigationController?.pushViewController(vc, animated: true)
         
     }
+    
+
+    
     override func viewWillAppear(_ animated: Bool) {
         tableView.reloadData()
     }
