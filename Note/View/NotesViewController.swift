@@ -40,8 +40,10 @@ class NotesViewController: UIViewController {
         tableView.dataSource = self
         
         
-        if notes.count == 0 {
-            dataBase.addRowNotes(nameRow: "First Note", text: "Your first note. Can you create you first Note?")
+        if dataBase.notes.count == 0{
+            dataBase.addRowNotes(nameRow: "Hello", text: "Your first note. Can you create you first Note?")
+        }else{
+            note?.updateNotes(nameRow: "Hello", text: "Your first note. Can you create you first Note?")
         }
         
     }
