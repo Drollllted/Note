@@ -52,7 +52,6 @@
 		DDA007392B8CCAD100444399 = {
 			isa = PBXGroup;
 			children = (
-				DDA007592B8CCF3C00444399 /* Note.xcdatamodeld */,
 				DDA007442B8CCAD200444399 /* Note */,
 				DDA007432B8CCAD200444399 /* Products */,
 			);
@@ -93,6 +92,7 @@
 		E53A9EA12BBBCDB100618DC5 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				DDA007592B8CCF3C00444399 /* Note.xcdatamodeld */,
 				E53A9EA22BBBCDB100618DC5 /* NoteRepositoryProtocol.swift */,
 				E53A9EA32BBBCDB100618DC5 /* Note.swift */,
 			);
