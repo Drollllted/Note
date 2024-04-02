@@ -7,9 +7,6 @@
 //
 
 import UIKit
-import CoreData
-
-import UIKit
 
 class NotesViewController: UIViewController {
     

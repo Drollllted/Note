@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import CoreData
 
 protocol NoteRepositoryProtocol {
     func addOrUpdateNote(note: Note) throws

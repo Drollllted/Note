@@ -7,10 +7,6 @@
 //
 
 import UIKit
-import CoreData
-
-import UIKit
-import CoreData
 
 class TextVC: UIViewController {
     
